@@ -1,0 +1,9 @@
+footer {
+    .footer_logo {
+        text-align: center;
+    }
+
+    & > img {
+        width: 100%;
+    }
+}

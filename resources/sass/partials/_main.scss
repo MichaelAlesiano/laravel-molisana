@@ -1,0 +1,192 @@
+// Main - Home 
+.container {
+    height: 800px;
+    background-image: url("../images/molisana-home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Main - Prodotti
+.main_container {
+    background: $main-bgcolor;
+    text-align: center;
+
+    h2 {
+        color: #404040;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: 300;
+        margin: 20px 0;
+    }
+
+    .products_container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .box_pasta {
+            display: flex;
+            width: calc(100% / 3);
+            position: relative;
+
+            &:hover {
+                .overlay {
+                    opacity: 1;
+
+                    i {
+                        animation: marMove 0.3s linear forwards;
+                        cursor: pointer;
+                    }
+
+                    @keyframes marMove {
+                        0% {
+                            margin-bottom: 50px;
+                        }
+                        100% {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .overlay {
+                position: absolute;
+                color: #fff;
+                background-color: $overlay-bgc;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s linear;
+
+                i {
+                    border: 4px solid #fff;
+                    border-radius: 50%;
+                    padding: 15px;
+                    font-size: 2em;
+                    margin-bottom: 50px;
+                }
+
+                a {
+                    font-size: 2em;
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+// Main - Notizie
+.news_container {
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .news_box {
+        width: calc(100% / 3);
+        display: flex;
+
+        &:hover {
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .overlay {
+            width: calc(100% / 3);
+            height: 100%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.35);
+            color: #fff;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transition: all 0.3s linear;
+
+            p {
+                font-size: 1.8em;
+            }
+
+            .divider {
+                width: 50px;
+                height: 2px;
+                background: #fff;
+            }
+
+            h3 {
+                font-size: 2em;
+            }
+
+            .btn {
+                border: 2px solid #fff;
+                padding: 10px 20px;
+                font-size: 1.5em;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    background-color: $menu-color;
+                    border: 2px solid $menu-color;
+                }
+            }
+        }
+    }
+}
+
+// Main - dettagli
+.details_container {
+    background: #b8dae4;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    .desc_box {
+        width: 1200px;
+        margin: auto;
+        text-align: justify;
+        margin-bottom: 50px;
+        font-size: 2em;
+
+        .desc {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $menu-color;
+                font-size: 1.5em;
+
+                p {
+                    margin-top: 10px;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
